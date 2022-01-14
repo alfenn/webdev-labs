@@ -1,0 +1,9 @@
+what is the string of numbers in the url?
+  what is it being hosted on?
+--why isn't my debug/development mode working?
+
+--how do i see output from pprint?
+
+does jinja automatically render any type of python? 
+  - noticed it doesn't work for 'user' ("object at memory...")
+  what do i need to convert it to in order to print (i.e., why can it print json, but not objects)
