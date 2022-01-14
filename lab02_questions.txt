@@ -1,9 +1,31 @@
-what is the string of numbers in the url?
-  what is it being hosted on?
+--what is the string of numbers in the url?
+  --what is it being hosted on?
+    > port 5000, 80 is occupied
+      > can change port: "$ flask run --port 5007"
+      > 127.01.01 (or something) == "localhost"
+        > can't be accessed by other computers: served within local host, and the host (and it's ports) are only accessible by my computer locally
+      > there are reserved ports: for different processes, can google
+    > stuff before the colon is the address of the machine
+      > port number: which file do you want to pull down
+    > what we'll do next week: change host to be server that's always listening on port 80
+      >> what's happening: python script is constantly running and listening for traffic; if it receives, it sends the string over http protocol
+  
+  --if I kill my bash terminal will my comp stop hosting the website? (don't want it running in the back)
+    > yes, if I actually kill terminal it should
+
 --why isn't my debug/development mode working?
+  >> didn't configue using bash (accidently used windows)
 
 --how do i see output from pprint?
+  >> print and pprint both print to terminal: pprint just prints ds nicely
 
-does jinja automatically render any type of python? 
+--does jinja automatically render any type of python? 
   - noticed it doesn't work for 'user' ("object at memory...")
-  what do i need to convert it to in order to print (i.e., why can it print json, but not objects)
+  --what do i need to convert it to in order to print (i.e., why can it print json, but not objects)
+    > doesn't know how to send dict over http, it's actually sending a string
+    > only knows how to send (whatever error said)
+
+--why don't the navbar links work?
+  > used ../ instead of /: flask rule is that static has to be in root
+    > when I configure FLASK_APP=app.py: setting up root
+    > static: css, js

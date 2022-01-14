@@ -56,7 +56,7 @@ def exercise3(city='Evanston, IL', search_term=' '):
     url = 'https://www.apitutor.org/yelp/simple/v3/businesses/search?location={0}&term={1}'.format(city, search_term)
     response = requests.get(url)
     data = response.json()
-    # pprint(data)    
+    # pprint(data)
     return json.dumps(data)
 
 ##############
@@ -69,7 +69,7 @@ def exercise4(city='Evanston, IL', search_term=''):
     url = 'https://www.apitutor.org/yelp/simple/v3/businesses/search?location={0}&term={1}'.format(city, search_term)
     response = requests.get(url)
     restaurants = response.json()
-    pprint(restaurants) # for debugging
+    # pprint(restaurants) # for debugging
     return render_template(
         'restaurant.html',
         user=current_user,
